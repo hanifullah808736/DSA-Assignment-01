@@ -12,11 +12,6 @@ public class Task09 {
 
         System.out.println("Duplicate values and occurrence counts:");
 
-        // TODO: Visit each element in the array.
-        // TODO: Check whether the value appeared at an earlier index.
-        // TODO: If it did not, count its total occurrences.
-        // TODO: Display the value only if its count is greater than 1.
-
         input.close();
     }
 }
