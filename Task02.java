@@ -1,31 +1,49 @@
 
-import java.util.Scanner; // Imports keyboard input functionality.
+import java.util.Scanner;
 
-public class Task02 { // Defines the Task02 class.
-    public static void main(String[] args) { // Starts the main method.
-        Scanner input = new Scanner(System.in); // Creates an input reader.
+public class Task02 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int[] numbers = new int[10];
 
-        int[] numbers = new int[10]; // Declares an array of 10 integers.
+        for (int i = 0; i < 10; i++) {
+            numbers[i] = input.nextInt();
+        }
 
-        // TODO 1: Read 10 integers into the array using a loop.
+        int min = numbers[0], max = numbers[0];
+        int minIndex = 0, maxIndex = 0;
 
-        int min = numbers[0]; // Initializes the minimum value.
-        int max = numbers[0]; // Initializes the maximum value.
-        int minIndex = 0; // Stores the index of the minimum.
-        int maxIndex = 0; // Stores the index of the maximum.
+        for (int i = 1; i < 10; i++) {
+            if (numbers[i] < min) {
+                min = numbers[i];
+                minIndex = i;
+            }
+            if (numbers[i] > max) {
+                max = numbers[i];
+                maxIndex = i;
+            }
+        }
 
-        // TODO 2: Traverse the array to update min, max,
-        // minIndex, and maxIndex.
+        int secondMin = 0, secondMinIndex = -1;
 
-        int secondMin = 0; // Stores the second minimum value.
-        int secondMinIndex = -1; // -1 means it has not been found.
+        for (int i = 0; i < 10; i++) {
+            if (numbers[i] > min &&
+                (secondMinIndex == -1 || numbers[i] < secondMin)) {
+                secondMin = numbers[i];
+                secondMinIndex = i;
+            }
+        }
 
-        // TODO 3: Find the smallest element greater than min.
-        // Update secondMin and secondMinIndex when appropriate.
+        System.out.println("Minimum: " + min + ", Index: " + minIndex);
+        System.out.println("Maximum: " + max + ", Index: " + maxIndex);
 
-        // TODO 4: Display min, max, and their indices.
-        // Display secondMin and its index if it was found.
+        if (secondMinIndex != -1) {
+            System.out.println("Second Minimum: " + secondMin +
+                               ", Index: " + secondMinIndex);
+        } else {
+            System.out.println("No distinct second minimum found.");
+        }
 
-        input.close(); // Closes the input reader.
+        input.close();
     }
 }
