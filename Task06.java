@@ -17,9 +17,7 @@ public class Task06 {
         if (index < 0 || index >= size) {
             System.out.println("Invalid index.");
         } else {
-            // TODO: Shift elements after index one position left.
-
-            // TODO: Decrease size by 1.
+          
 
             System.out.println("Updated array:");
             for (int i = 0; i < size; i++) {
