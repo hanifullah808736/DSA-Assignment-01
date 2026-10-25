@@ -1,4 +1,3 @@
-
 import java.util.Scanner; // Imports Scanner for keyboard input.
 
 public class Task01 { // Declares the Task01 class.
