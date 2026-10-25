@@ -18,8 +18,6 @@ public class Task10 {
             second[i] = input.nextInt();
         }
 
-        // TODO: Copy all elements of first into merged.
-        // TODO: Copy all elements of second after the first array's elements.
 
         System.out.println("Merged array:");
         for (int i = 0; i < merged.length; i++) {
@@ -27,7 +25,6 @@ public class Task10 {
         }
         System.out.println();
 
-        // TODO: Find the largest element in merged and display it.
 
         input.close();
     }
