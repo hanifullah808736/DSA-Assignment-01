@@ -10,8 +10,6 @@ public class Task08 {
             numbers[i] = input.nextInt();
         }
 
-        // TODO: Use Bubble Sort to arrange numbers in ascending order.
-        // Compare adjacent elements and swap them when needed.
 
         System.out.println("Ascending order:");
         for (int i = 0; i < numbers.length; i++) {
@@ -20,7 +18,6 @@ public class Task08 {
         System.out.println();
 
         System.out.println("Descending order:");
-        // TODO: Display the sorted array from the last index to the first.
 
         input.close();
     }
